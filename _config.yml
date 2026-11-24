@@ -1,0 +1,38 @@
+title: Renjitha K
+description: Data platform engineer and technical program lead. Builds data platforms, ships programs, writes about data reliability.
+author: Renjitha K
+url: "https://renjithak-swe.github.io"
+baseurl: ""
+lang: en
+
+links:
+  github: https://github.com/renjithak-swe
+  linkedin: https://www.linkedin.com/in/renjitha-k/
+  hashnode: https://renjithak.hashnode.dev
+  email: renjithak0@gmail.com
+
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+permalink: /writing/:title/
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+feed:
+  path: feed.xml
+
+defaults:
+  - scope: { path: "", type: posts }
+    values: { layout: post }
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor

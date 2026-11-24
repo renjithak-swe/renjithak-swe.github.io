@@ -1,0 +1,39 @@
+---
+layout: default
+title: Writing
+description: Articles by Renjitha K on data reliability, provenance, data engineering and AI evaluation.
+---
+<section class="section wrap page-top">
+  <header class="section-head">
+    <p class="eyebrow">Writing</p>
+    <h1>Notes on data, evidence and systems</h1>
+    <p class="section-intro">Articles on when data can be trusted to answer a question. Where an argument needs testing, the article includes a small experiment with its code.</p>
+  </header>
+
+  {% if site.posts.size > 0 %}
+  {% assign by_year = site.posts | group_by_exp: "p", "p.date | date: '%Y'" %}
+  {% for year in by_year %}
+  <h2 class="year">{{ year.name }}</h2>
+  <ul class="post-list post-list-wide">
+    {% for post in year.items %}
+    <li>
+      <a href="{{ post.url }}">{{ post.title }}</a>
+      <span class="post-list-meta"><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%-d %b" }}</time>{% if post.description %} · {{ post.description }}{% endif %}</span>
+    </li>
+    {% endfor %}
+  </ul>
+  {% endfor %}
+  {% else %}
+  <p class="empty">The first article is on its way. Subscribe via <a href="/feed.xml">RSS</a> to get it when it’s out.</p>
+  {% endif %}
+
+  <h2 class="year">Earlier, on Hashnode</h2>
+  <ul class="post-list post-list-wide">
+    {% for item in site.data.hashnode %}
+    <li>
+      <a href="{{ item.url }}">{{ item.title }}</a>
+      <span class="post-list-meta"><time datetime="{{ item.date }}">{{ item.date | date: "%b %Y" }}</time> · {{ item.topic }}</span>
+    </li>
+    {% endfor %}
+  </ul>
+</section>

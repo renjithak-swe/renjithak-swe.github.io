@@ -1,0 +1,20 @@
+- title: "Scaling Redis: Sentinel vs. Cluster"
+  url: https://renjithak.hashnode.dev/scaling-redis-sentinel-vs-cluster-what-you-need-to-know
+  date: 2025-03-31
+  topic: Redis
+- title: "Redis as a Cache, a Database and a Message Queue"
+  url: https://renjithak.hashnode.dev/unlocking-the-power-of-redis-cache-database-and-message-queue
+  date: 2025-03-16
+  topic: Redis
+- title: "Data Pipelines with Delta Lake"
+  url: https://renjithak.hashnode.dev/transform-your-data-strategy-mastering-pipelines-with-delta-lake
+  date: 2025-02-23
+  topic: Delta Lake
+- title: "Slowly Changing Dimensions, Explained with Vendor Feeds"
+  url: https://renjithak.hashnode.dev/mastering-slowly-changing-dimensions-scd-a-guide-using-vendor-feeds
+  date: 2025-01-18
+  topic: Data modelling
+- title: "Apache Airflow for Data Workflows"
+  url: https://renjithak.hashnode.dev/streamlining-data-workflows-the-essential-guide-to-apache-airflow
+  date: 2024-12-29
+  topic: Orchestration

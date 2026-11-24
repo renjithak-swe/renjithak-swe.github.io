@@ -1,0 +1,201 @@
+---
+layout: default
+---
+<section class="hero wrap">
+  <div class="hero-text">
+    <p class="eyebrow">Data platforms · Technical program leadership</p>
+    <h1>I build data platforms, and I lead the programs that ship&nbsp;them.</h1>
+    <p class="lede">
+      I’m Renjitha. For six and a half years I’ve worked on financial data systems, most recently as technical lead and
+      project manager at Morgan Stanley. I like both halves of that work: designing the pipeline, and getting six teams to agree on what ships first.
+    </p>
+    <p class="hero-actions">
+      <a class="btn btn-primary" href="#work">Case studies</a>
+      <a class="btn" href="/writing/">Writing</a>
+      <a class="btn" href="{{ site.links.linkedin }}">LinkedIn</a>
+    </p>
+  </div>
+
+  <aside class="record" aria-label="Profile summary">
+    <p class="record-head"><span>profile.yaml</span><span class="record-ok">schema ✓</span></p>
+    <dl>
+      <div><dt>builds</dt><dd>Spark · Databricks · Snowflake · Airflow · Kafka · Java</dd></div>
+      <div><dt>delivers</dt><dd>roadmaps · cross-team plans · go-live &amp; rollback</dd></div>
+      <div><dt>domain</dt><dd>financial data, regulatory systems</dd></div>
+      <div><dt>based</dt><dd>Bengaluru · hybrid · remote</dd></div>
+      <div><dt>open_to</dt><dd>senior data engineering, technical program management</dd></div>
+    </dl>
+  </aside>
+</section>
+
+<section class="section wrap" id="work" data-lens="both">
+  <header class="section-head section-head-row">
+    <div>
+      <p class="eyebrow">Case studies</p>
+      <h2>Three programs, two sides of each</h2>
+    </div>
+    <div class="lens" role="group" aria-label="Choose which side of each case study to read">
+      <span class="lens-label">Read as</span>
+      <button type="button" id="lens-both" data-set-lens="both" aria-pressed="true">Both</button>
+      <button type="button" id="lens-build" data-set-lens="build" aria-pressed="false">Engineering</button>
+      <button type="button" id="lens-deliver" data-set-lens="deliver" aria-pressed="false">Delivery</button>
+    </div>
+  </header>
+
+  <article class="case">
+    <header class="case-head">
+      <p class="case-index">Morgan Stanley · 2024–2026</p>
+      <h3>One source of truth for client data</h3>
+      <p class="case-problem">Six teams each had their own way to bring in client data from internal systems and vendors such as Bloomberg, GLEIF and Markit. Every new source meant new code, and the same client could show up as different records in different places.</p>
+      <p class="case-role"><span>Role</span>Technical lead and project manager · 9 engineers · 10–30 stakeholders</p>
+    </header>
+    <div class="case-sides">
+      <section class="side" data-side="build">
+        <h4>What I built</h4>
+        <p>A configuration-driven framework: each feed is declared in YAML, validated by a Spring Boot service, and generated into Airflow workflows that infer their own task dependencies. Data lands in a medallion pipeline on Azure, Databricks and Snowflake. Quantexa entity resolution gives every client one firm-wide ID.</p>
+      </section>
+      <section class="side" data-side="deliver">
+        <h4>How I delivered it</h4>
+        <p>I turned six teams’ workflows into one onboarding model, set up two-week sprints and an intake process, and reported to Executive and Managing Directors every two weeks. When a client couldn’t wait, we served them through existing components until their source was scheduled.</p>
+      </section>
+    </div>
+    <figure class="flow" data-side="build" aria-label="How configuration becomes running pipelines">
+      <ol class="steps">
+        <li><b>YAML</b><span>feed declared as config</span></li>
+        <li><b>Spring Boot</b><span>validate → JSON</span></li>
+        <li><b>Python generator</b><span>infer deps, add metrics</span></li>
+        <li><b>Airflow</b><span>raw → bronze → silver → Snowflake</span></li>
+      </ol>
+    </figure>
+    <ul class="outcomes">
+      <li><strong>8</strong><span>sources onboarded in 5 months</span></li>
+      <li><strong>50%</strong><span>processing efficiency gain</span></li>
+      <li><strong>0</strong><span>open production tickets for a year</span></li>
+    </ul>
+  </article>
+
+  <article class="case">
+    <header class="case-head">
+      <p class="case-index">Morgan Stanley · 2021–2023</p>
+      <h3>Grouping clients for a regulator</h3>
+      <p class="case-problem">The Hong Kong Monetary Authority required the bank’s Asia entities to track credit exposure per group of connected clients: those under common control or ownership. That logic had to sit inside account opening, which five other teams also owned.</p>
+      <p class="case-role"><span>Role</span>Technical lead · 12 engineers · 5 partner teams</p>
+    </header>
+    <div class="case-sides">
+      <section class="side" data-side="build">
+        <h4>What I built</h4>
+        <p>A grouping calculation engine and approval workflow embedded in the wealth-management account-opening flow, with results written to the account master. In the same role, I automated client-committee and fast-track approvals as event-driven Spring Boot and Kafka services.</p>
+      </section>
+      <section class="side" data-side="deliver">
+        <h4>How I delivered it</h4>
+        <p>I managed dependencies across the frontend, QA, production engineering, Pega workflow and client teams, and planned the cutover, rollback and release coordination for go-live. I also ramped up new graduate engineers on the team.</p>
+      </section>
+    </div>
+    <ul class="outcomes">
+      <li><strong>Live</strong><span>regulatory requirement met in production</span></li>
+      <li><strong>50%+</strong><span>less manual effort in approvals</span></li>
+      <li><strong>2022</strong><span>Operations Technology Award, Taking Ownership</span></li>
+    </ul>
+  </article>
+
+  <article class="case">
+    <header class="case-head">
+      <p class="case-index">Morgan Stanley · 2023–2024</p>
+      <h3>From five months to three weeks</h3>
+      <p class="case-problem">Adding one field to non-client account onboarding took 4–5 months. The platform was undocumented legacy JavaScript, and the reasons for the delay weren’t obvious.</p>
+      <p class="case-role"><span>Role</span>Technical lead · multiple business units</p>
+    </header>
+    <div class="case-sides">
+      <section class="side" data-side="build">
+        <h4>What I built</h4>
+        <p>A target microservice architecture and a migration path for the undocumented platform. In the same role, I built Pipex Initializer, a tool that standardises how new microservices are created in the monorepo.</p>
+      </section>
+      <section class="side" data-side="deliver">
+        <h4>How I delivered it</h4>
+        <p>I traced the delay to dependent components missing from test environments and code that was hard to debug. Then I agreed a plan with stakeholders: new requests move first, and the full platform follows.</p>
+      </section>
+    </div>
+    <ul class="outcomes">
+      <li><strong>2–3 wk</strong><span>per attribute, down from 4–5 months</span></li>
+      <li><strong>5 min</strong><span>service setup, down from 1–2 days</span></li>
+      <li><strong>40+</strong><span>services built with Pipex</span></li>
+    </ul>
+  </article>
+</section>
+
+<section class="section wrap" id="writing">
+  <header class="section-head">
+    <p class="eyebrow">Writing</p>
+    <h2>Notes on data, evidence and systems</h2>
+    <p class="section-intro">I write about when data can be trusted to answer a question, and I run small experiments when an argument needs testing.</p>
+  </header>
+
+  <div class="writing-grid">
+    <div>
+      <h3 class="list-title">Latest</h3>
+      {% if site.posts.size > 0 %}
+      <ul class="post-list">
+        {% for post in site.posts limit: 4 %}
+        <li>
+          <a href="{{ post.url }}">{{ post.title }}</a>
+          <span class="post-list-meta"><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%-d %b %Y" }}</time>{% if post.description %} · {{ post.description }}{% endif %}</span>
+        </li>
+        {% endfor %}
+      </ul>
+      <p><a class="more" href="/writing/">All writing →</a></p>
+      {% else %}
+      <p class="empty">The first article in a new series on data reliability is on its way. Subscribe via <a href="/feed.xml">RSS</a>.</p>
+      {% endif %}
+    </div>
+    <div>
+      <h3 class="list-title">Earlier, on Hashnode</h3>
+      <ul class="post-list">
+        {% for item in site.data.hashnode limit: 3 %}
+        <li>
+          <a href="{{ item.url }}">{{ item.title }}</a>
+          <span class="post-list-meta"><time datetime="{{ item.date }}">{{ item.date | date: "%b %Y" }}</time> · {{ item.topic }}</span>
+        </li>
+        {% endfor %}
+      </ul>
+      <p><a class="more" href="{{ site.links.hashnode }}">All on Hashnode →</a></p>
+    </div>
+  </div>
+</section>
+
+<section class="section wrap about" id="about">
+  <header class="section-head">
+    <p class="eyebrow">About</p>
+    <h2>Engineer first, then the person who unblocks the team</h2>
+  </header>
+  <div class="about-body">
+    <p>I started as a systems engineer at Tata Consultancy Services on Bank of America’s payment systems. At Morgan Stanley I moved from technical lead to Director, and my work grew from building systems to also deciding what got built, in what order, and by whom.</p>
+    <p>Outside the roadmap, I ran the firm’s Data Engineering Club in Asia for a year. That was 10+ sessions, each with about 200 people. I’ve also interviewed 30–40 engineers and mentored three contractors into permanent roles. I speak English, Hindi, Tamil and Malayalam, and I’m learning French.</p>
+  </div>
+</section>
+
+<section class="contact wrap" id="contact">
+  <h2>Building a data platform, or trying to ship one?</h2>
+  <ul class="contact-links">
+    <li><span>Email</span><a href="mailto:{{ site.links.email }}">{{ site.links.email }}</a></li>
+    <li><span>LinkedIn</span><a href="{{ site.links.linkedin }}">in/renjitha-k</a></li>
+    <li><span>GitHub</span><a href="{{ site.links.github }}">renjithak-swe</a></li>
+  </ul>
+</section>
+
+<script>
+  (function () {
+    var work = document.getElementById("work");
+    var buttons = work.querySelectorAll("[data-set-lens]");
+    function setLens(lens) {
+      work.dataset.lens = lens;
+      buttons.forEach(function (b) { b.setAttribute("aria-pressed", String(b.dataset.setLens === lens)); });
+    }
+    buttons.forEach(function (b) {
+      b.addEventListener("click", function () {
+        setLens(b.dataset.setLens);
+        try { localStorage.setItem("lens", b.dataset.setLens); } catch (e) {}
+      });
+    });
+    try { var saved = localStorage.getItem("lens"); if (saved === "build" || saved === "deliver") setLens(saved); } catch (e) {}
+  })();
+</script>
