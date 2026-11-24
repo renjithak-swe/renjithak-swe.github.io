@@ -100,14 +100,11 @@ nav a:hover { color: var(--accent); }
 .btn-primary { background: var(--ink); border-color: var(--ink); color: var(--bg); }
 .btn-primary:hover { background: var(--accent); border-color: var(--accent); color: var(--bg); }
 
-.record { min-width: 0; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); font: 400 var(--step--1)/1.5 var(--font-mono); }
-.record-head { display: flex; justify-content: space-between; padding: 0.6rem 1rem; border-bottom: 1px solid var(--line); color: var(--muted); }
-.record-ok { color: var(--accent); }
-.record dl { margin: 0; padding: 0.75rem 1rem 1rem; display: grid; gap: 0.4rem; }
-.record dl > div { display: grid; grid-template-columns: 8.5ch minmax(0, 1fr); gap: 0.75rem; }
-.record dt { color: var(--muted); }
-.record dt::after { content: ":"; }
-.record dd { margin: 0; overflow-wrap: anywhere; }
+.glance { min-width: 0; border-left: 2px solid var(--accent); padding-left: 1.25rem; }
+.glance dl { margin: 0; display: grid; gap: 1rem; }
+.glance dl > div { display: grid; gap: 0.15rem; }
+.glance dt { font: 500 var(--step--1)/1.4 var(--font-mono); color: var(--muted); }
+.glance dd { margin: 0; line-height: 1.45; }
 
 /* Sections */
 .section { padding-block: 4.5rem 1rem; display: grid; gap: 2.5rem; }
@@ -120,14 +117,15 @@ nav a:hover { color: var(--accent); }
 .section-intro { color: var(--muted); font-size: var(--step-1); line-height: 1.55; }
 
 /* Lens switch */
-.lens { display: inline-flex; align-items: center; flex-wrap: wrap; gap: 0.25rem; padding: 0.25rem; border: 1px solid var(--line); border-radius: 999px; background: var(--surface); }
-.lens-label { font: 400 var(--step--1)/1 var(--font-mono); color: var(--muted); padding-inline: 0.6rem 0.3rem; }
+.lens { display: flex; align-items: flex-end; flex-wrap: wrap; gap: 0 1.5rem; border-bottom: 1px solid var(--line); }
+.lens-label { font: 500 var(--step--1)/1 var(--font-mono); color: var(--muted); padding-bottom: 0.7rem; }
 .lens button {
-  font: 500 var(--step--1)/1 var(--font-body); color: var(--ink); background: none; border: 0;
-  padding: 0.5rem 0.85rem; border-radius: 999px; cursor: pointer; transition: background-color 0.15s, color 0.15s;
+  font: 500 var(--step-0)/1 var(--font-body); color: var(--muted); background: none; border: 0;
+  border-bottom: 2px solid transparent; margin-bottom: -1px; padding: 0.55rem 0 0.65rem; cursor: pointer;
+  transition: color 0.15s, border-color 0.15s;
 }
-.lens button:hover { color: var(--accent); }
-.lens button[aria-pressed="true"] { background: var(--ink); color: var(--bg); }
+.lens button:hover { color: var(--ink); }
+.lens button[aria-pressed="true"] { color: var(--ink); font-weight: 600; border-bottom-color: var(--accent); }
 
 /* Case studies */
 .case { display: grid; gap: 1.75rem; padding-top: 1.75rem; border-top: 2px solid var(--ink); }
