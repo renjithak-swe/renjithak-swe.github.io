@@ -38,21 +38,21 @@
 <text class="ink-2 small" x="590.5" y="318" text-anchor="middle">+60%</text>
 <line class="grid" x1="704.0" x2="704.0" y1="92" y2="300"/>
 <text class="ink-2 small" x="704.0" y="318" text-anchor="middle">+80%</text>
+<line class="axis" x1="250" x2="250" y1="92" y2="300"/>
 <text class="ink" x="238" y="122.0" text-anchor="end">Q1 · median value</text>
 <text class="ink-2 small" x="256" y="122.0">no change in any scenario</text>
 <text class="ink" x="238" y="174.0" text-anchor="end">Q2 · share worth $400k+</text>
 <text class="ink-2 small" x="256" y="174.0">no change in any scenario</text>
 <text class="ink" x="238" y="226.0" text-anchor="end">Q4 · avg value, high-income areas</text>
-<rect class="s1" x="250" y="205.0" width="78.7" height="10.0" rx="2"/>
-<rect class="s2" x="250" y="217.0" width="196.7" height="10.0" rx="2"/>
-<rect class="s3" x="250" y="229.0" width="393.4" height="10.0" rx="2"/>
+<rect class="s1" x="250.0" y="205.0" width="78.7" height="10.0" rx="2"/>
+<rect class="s2" x="250.0" y="217.0" width="196.7" height="10.0" rx="2"/>
+<rect class="s3" x="250.0" y="229.0" width="393.4" height="10.0" rx="2"/>
 <text class="ink small" x="649.4" y="238.0">+69%</text>
 <text class="ink" x="238" y="278.0" text-anchor="end">Q5 · value per +$10k income</text>
-<rect class="s1" x="250" y="257.0" width="69.6" height="10.0" rx="2"/>
-<rect class="s2" x="250" y="269.0" width="173.9" height="10.0" rx="2"/>
-<rect class="s3" x="250" y="281.0" width="347.8" height="10.0" rx="2"/>
+<rect class="s1" x="250.0" y="257.0" width="69.6" height="10.0" rx="2"/>
+<rect class="s2" x="250.0" y="269.0" width="173.9" height="10.0" rx="2"/>
+<rect class="s3" x="250.0" y="281.0" width="347.8" height="10.0" rx="2"/>
 <text class="ink small" x="603.8" y="290.0">+61%</text>
-<line class="axis" x1="250" x2="250" y1="92" y2="300"/>
-<text class="ink-2 small" x="24" y="342">Q3 (share worth $600k+) is not shown: it is recorded as 0%, so a % change can’t be computed.</text>
-<text class="ink-2 small" x="24" y="360">Its true value lies somewhere between 0% and 4.68%.</text>
+<text class="ink-2 small" x="24.0" y="342.0">Q3 (share worth $600k+) is not shown: it is recorded as 0%, so a % change can’t be computed.</text>
+<text class="ink-2 small" x="24.0" y="360.0">Its true value lies somewhere between 0% and 4.68%.</text>
 </svg>

@@ -70,7 +70,10 @@ So far, this dataset looks about as clean as real-world data gets.
 
 Here's what the house values look like when you plot them:
 
-![Histogram of median house values. Most neighbourhoods fall between $50k and $350k, the tallest normal bar is 576 neighbourhoods, and there is a separate spike of 965 neighbourhoods at exactly $500,001.](/assets/img/clean-but-wrong/house-value-histogram.svg)
+<picture>
+  <source media="(max-width: 600px)" srcset="/assets/img/clean-but-wrong/house-value-histogram-narrow.svg">
+  <img src="/assets/img/clean-but-wrong/house-value-histogram.svg" alt="Histogram of median house values. Most neighbourhoods fall between $50k and $350k, the tallest normal bar is 576 neighbourhoods, and there is a separate spike of 965 neighbourhoods at exactly $500,001." width="760" loading="lazy">
+</picture>
 
 See that orange bar on the right? **965 neighbourhoods have exactly the same value: $500,001.** The tallest normal bar, a whole $5,000 range of prices, holds only 576.
 
@@ -97,7 +100,10 @@ We can't see the true values hidden behind that cap. So for each question, I com
 
 I also tried 1.2× and 1.5×. Here's how far each answer moves:
 
-![Bar chart of the percent change in each answer. Questions 1 and 2 show no change in any scenario. Question 4 rises by 14%, 35% and 69% at 1.2×, 1.5× and 2× the cap. Question 5 rises by 12%, 31% and 61%.](/assets/img/clean-but-wrong/answer-shifts.svg)
+<picture>
+  <source media="(max-width: 600px)" srcset="/assets/img/clean-but-wrong/answer-shifts-narrow.svg">
+  <img src="/assets/img/clean-but-wrong/answer-shifts.svg" alt="Bar chart of the percent change in each answer. Questions 1 and 2 show no change in any scenario. Question 4 rises by 14%, 35% and 69% at 1.2×, 1.5× and 2× the cap. Question 5 rises by 12%, 31% and 61%." width="760" loading="lazy">
+</picture>
 
 **One file. One quality report. Only two of the five answers are safe.**
 
@@ -168,7 +174,7 @@ Everything here is reproducible. The code, tests and full results are on GitHub:
 ```bash
 git clone https://github.com/renjithak-swe/clean-but-unfit.git
 cd clean-but-unfit
-python -m unittest discover -s tests -t .   # 49 tests
+python -m unittest discover -s tests -t .   # 52 tests
 python -m clean_unfit --data-dir data --out results
 ```
 

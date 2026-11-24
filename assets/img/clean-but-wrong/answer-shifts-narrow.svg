@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 462" role="img" aria-label="Percent change in each answer when capped homes are assumed to be worth more">
+
+<style>
+  .surface { fill: #fcfcfb; }
+  .ink { fill: #0b0b0b; } .ink-2 { fill: #52514e; }
+  .grid { stroke: #e4e3df; stroke-width: 1; }
+  .axis { stroke: #b9b8b2; stroke-width: 1; }
+  .bar { fill: #86b6ef; } .cap { fill: #eb6834; }
+  .s1 { fill: #9ec5f4; } .s2 { fill: #3987e5; } .s3 { fill: #184f95; }
+  text { font-family: "IBM Plex Sans", "Segoe UI", system-ui, sans-serif; font-size: 13px; }
+  .title { font-size: 15px; font-weight: 600; }
+  .small { font-size: 12px; }
+  @media (prefers-color-scheme: dark) {
+    .surface { fill: #1a1a19; }
+    .ink { fill: #f0efec; } .ink-2 { fill: #c3c2b7; }
+    .grid { stroke: #2f2f2d; } .axis { stroke: #55544f; }
+    .bar { fill: #3987e5; } .cap { fill: #d95926; }
+    .s1 { fill: #6da7ec; } .s2 { fill: #3987e5; } .s3 { fill: #cde2fb; }
+  }
+</style>
+
+<rect class="surface" width="360" height="462"/>
+<text class="ink title" x="16" y="24">How much does each answer change?</text>
+<text class="ink-2 small" x="16.0" y="44.0">Change from the recorded answer if capped</text>
+<text class="ink-2 small" x="16.0" y="60.0">homes are really worth more than the cap</text>
+<text class="ink small" x="16" y="92">Capped homes worth:</text>
+<rect class="s1" x="136.0" y="82" width="12" height="12" rx="2"/>
+<text class="ink small" x="152.0" y="92">1.2×</text>
+<rect class="s2" x="192.0" y="82" width="12" height="12" rx="2"/>
+<text class="ink small" x="208.0" y="92">1.5×</text>
+<rect class="s3" x="248.0" y="82" width="12" height="12" rx="2"/>
+<text class="ink small" x="264.0" y="92">2×</text>
+<line class="grid" x1="16.0" x2="16.0" y1="118" y2="366"/>
+<text class="ink-2 small" x="16.0" y="384" text-anchor="middle">+0%</text>
+<line class="grid" x1="90.0" x2="90.0" y1="118" y2="366"/>
+<text class="ink-2 small" x="90.0" y="384" text-anchor="middle">+20%</text>
+<line class="grid" x1="164.0" x2="164.0" y1="118" y2="366"/>
+<text class="ink-2 small" x="164.0" y="384" text-anchor="middle">+40%</text>
+<line class="grid" x1="238.0" x2="238.0" y1="118" y2="366"/>
+<text class="ink-2 small" x="238.0" y="384" text-anchor="middle">+60%</text>
+<line class="grid" x1="312.0" x2="312.0" y1="118" y2="366"/>
+<text class="ink-2 small" x="312.0" y="384" text-anchor="middle">+80%</text>
+<line class="axis" x1="16" x2="16" y1="118" y2="366"/>
+<text class="ink" x="20" y="134.0">Q1 · median value</text>
+<text class="ink-2 small" x="20" y="154.0">no change in any scenario</text>
+<text class="ink" x="20" y="196.0">Q2 · share worth $400k+</text>
+<text class="ink-2 small" x="20" y="216.0">no change in any scenario</text>
+<text class="ink" x="20" y="258.0">Q4 · avg value, high-income areas</text>
+<rect class="s1" x="16.0" y="266.0" width="51.3" height="10.0" rx="2"/>
+<rect class="s2" x="16.0" y="278.0" width="128.2" height="10.0" rx="2"/>
+<rect class="s3" x="16.0" y="290.0" width="256.5" height="10.0" rx="2"/>
+<text class="ink small" x="278.5" y="299.0">+69%</text>
+<text class="ink" x="20" y="320.0">Q5 · value per +$10k income</text>
+<rect class="s1" x="16.0" y="328.0" width="45.4" height="10.0" rx="2"/>
+<rect class="s2" x="16.0" y="340.0" width="113.4" height="10.0" rx="2"/>
+<rect class="s3" x="16.0" y="352.0" width="226.8" height="10.0" rx="2"/>
+<text class="ink small" x="248.8" y="361.0">+61%</text>
+<text class="ink-2 small" x="16.0" y="410.0">Q3 (share worth $600k+) is not shown: it is recorded</text>
+<text class="ink-2 small" x="16.0" y="426.0">as 0%, so a % change can’t be computed.</text>
+<text class="ink-2 small" x="16.0" y="442.0">Its true value lies between 0% and 4.68%.</text>
+</svg>
