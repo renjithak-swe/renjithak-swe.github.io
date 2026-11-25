@@ -6,7 +6,7 @@ layout: default
     <h1 id="hero-title">I build data platforms, and I test when they can be&nbsp;trusted.</h1>
     <p class="lede">I investigate when data can be trusted to answer the question we ask of it, drawing on nearly seven years of building financial data platforms, most recently as Director and technical lead at Morgan Stanley.</p>
     <p class="actions">
-      <a class="action action-primary" href="/writing/clean-but-wrong-for-your-question/">Read the experiment</a>
+      <a class="action action-primary" href="/writing/beyond-correlation-cross-sensor-disagreement/">Read the experiment</a>
       <a class="action" href="#work">See the case studies</a>
     </p>
   </div>
@@ -15,22 +15,22 @@ layout: default
     <span class="tape tape-a" aria-hidden="true"></span>
     <span class="tape tape-b" aria-hidden="true"></span>
     <span class="stamp" aria-hidden="true"><span>Open</span><span>experiment</span><span class="data">2026</span></span>
-    <img src="/assets/img/clean-but-wrong/house-value-histogram-narrow.svg" width="360" height="380" alt="Histogram of California house values: most neighbourhoods fall between $50k and $350k, with a separate spike of 965 neighbourhoods recorded at exactly $500,001.">
+    <img src="/assets/img/cross-sensor-disagreement/hero-ndvi-bias.svg" width="360" height="380" alt="Dot plot of Sentinel-2 minus Landsat NDVI bias at each processing step, on 47 image pairs over east Bengaluru: native pixels −0.036, common grid −0.041, B08 at 20 m −0.040, B8A band −0.022, view angle −0.021, bandpass −0.016. The bias shrinks but never reaches zero.">
   </figure>
 
   <div class="label-block">
-    <p class="label-name"><i>Clean but unfit</i></p>
+    <p class="label-name"><i>Cross-sensor disagreement</i></p>
     <dl class="fields">
       <div><dt>Collector</dt><dd>Renjitha K</dd></div>
-      <div><dt>Locality</dt><dd>California Housing, 1990 US census</dd></div>
-      <div><dt>Collected</dt><dd class="data">24 Nov 2026</dd></div>
-      <div><dt>Evidence</dt><dd><a href="https://github.com/renjithak-swe/clean-but-unfit">Repository with 52 tests</a>, public data with a pinned checksum</dd></div>
+      <div><dt>Locality</dt><dd>East Bengaluru, Sentinel-2 and Landsat 8/9, 2023–2025</dd></div>
+      <div><dt>Collected</dt><dd class="data">25 Nov 2026</dd></div>
+      <div><dt>Evidence</dt><dd><a href="https://github.com/renjithak-swe/cross-sensor-disagreement">Repository with 70 tests</a>, every source image ID in a hashed manifest</dd></div>
     </dl>
   </div>
 
   <ol class="slips slips-layered" aria-label="Findings, oldest first">
-    <li class="slip"><span class="slip-mark">det.</span> <span class="data">24 Nov 2026</span> Clean: passes 14 of 15 quality checks.</li>
-    <li class="slip slip-rev"><span class="slip-mark">rev.</span> <span class="data">24 Nov 2026</span> Unfit for 3 of 5 questions: house values are capped at $500,001.</li>
+    <li class="slip"><span class="slip-mark">det.</span> <span class="data">25 Nov 2026</span> Agree: Sentinel-2 and Landsat NDVI correlate at r = 0.96.</li>
+    <li class="slip slip-rev"><span class="slip-mark">rev.</span> <span class="data">25 Nov 2026</span> Disagree: Sentinel-2 reads 0.041 lower on the same ground. Fixes cut it to 0.016, and made trees worse.</li>
   </ol>
 </section>
 

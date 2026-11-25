@@ -122,12 +122,12 @@ Every correction here comes from a published source. Nothing was tuned on these 
 
 <picture>
   <source media="(max-width: 600px)" srcset="/assets/img/cross-sensor-disagreement/fig07-harmonization-ladder-narrow.svg">
-  <img src="/assets/img/cross-sensor-disagreement/fig07-harmonization-ladder.svg" alt="Dot plot with 95% intervals for each step on the same 47 pairs. NDVI MAE: native 0.097, common grid 0.062, B08 at 20 m 0.061, B8A 0.052, view angle 0.051, bandpass 0.048. NDVI mean bias: minus 0.037, minus 0.041, minus 0.040, minus 0.022, minus 0.021, minus 0.016." width="760" loading="lazy">
+  <img src="/assets/img/cross-sensor-disagreement/fig07-harmonization-ladder.svg" alt="Dot plot with 95% intervals for each step on the same 47 pairs. NDVI MAE: native 0.097, common grid 0.062, B08 at 20 m 0.061, B8A 0.052, view angle 0.051, bandpass 0.048. NDVI mean bias: minus 0.036, minus 0.041, minus 0.040, minus 0.022, minus 0.021, minus 0.016." width="760" loading="lazy">
 </picture>
 
 | Step | What changes | NDVI MAE | NDVI bias | NIR bias |
 |---|---|---|---|---|
-| Native pixels | Nothing | 0.097 | −0.037 | +0.022 |
+| Native pixels | Nothing | 0.097 | −0.036 | +0.022 |
 | Common grid | Area-average Sentinel-2 onto Landsat's pixels | 0.062 | −0.041 | +0.022 |
 | B08 at 20 m | Average the B08 band onto B8A's 20 m pixels first | 0.061 | −0.040 | +0.022 |
 | B8A | Swap to the narrow NIR band, at the same 20 m pixels | 0.052 | −0.022 | **+0.034** |
