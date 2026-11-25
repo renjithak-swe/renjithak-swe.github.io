@@ -222,7 +222,7 @@ But HLS also changes the cloud masks, the view-angle correction, the bandpass ad
 The code, tests and full results are on GitHub: **[renjithak-swe/cross-sensor-disagreement](https://github.com/renjithak-swe/cross-sensor-disagreement)**
 
 - **Data:** read straight from Microsoft Planetary Computer. No account, no API key, and no imagery copied into the repo.
-- **Requirements:** Python 3.13 and the pinned packages. The first run reads about 1 GB of image windows and takes 1–2 hours. After that it uses a local cache.
+- **Requirements:** Python 3.13 and the pinned packages. The first run takes 1–2 hours and caches about 0.7 GB of compressed image windows. After that, reruns read no imagery.
 - **Traceability:** every run writes a manifest with each source image ID, the full configuration, each pair's mask fingerprint and a checksum for every output.
 
 ```bash
