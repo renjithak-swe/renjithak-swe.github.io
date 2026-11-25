@@ -2,22 +2,23 @@
 layout: default
 ---
 {% assign minutes = content | number_of_words | divided_by: 220 | plus: 1 %}
-<article class="post wrap">
+<article class="sheet post">
+  <p class="crumb"><a href="/writing/">All writing</a></p>
   <header class="post-head">
-    <p class="eyebrow"><a href="/writing/">Writing</a></p>
     <h1>{{ page.title }}</h1>
-    {% if page.subtitle %}<p class="post-sub">{{ page.subtitle }}</p>{% endif %}
-    <p class="post-meta">
-      <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%-d %B %Y" }}</time>
-      <span>{{ minutes }} min read</span>
-      {% for tag in page.tags %}<span class="tag">{{ tag }}</span>{% endfor %}
-    </p>
+    {% if page.description %}<p class="post-sub">{{ page.description }}</p>{% endif %}
+    <dl class="fields post-fields">
+      <div><dt>Published</dt><dd class="data"><time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%-d %B %Y" }}</time></dd></div>
+      <div><dt>Reading time</dt><dd>{{ minutes }} minutes</dd></div>
+      {% if page.tags.size > 0 %}<div><dt>Topics</dt><dd>{{ page.tags | join: ", " | replace: "-", " " }}</dd></div>{% endif %}
+      {% if page.repo %}<div><dt>Evidence</dt><dd><a href="{{ page.repo }}">{{ page.repo | remove: "https://github.com/" }}</a></dd></div>{% endif %}
+    </dl>
   </header>
   <div class="prose">
     {{ content }}
   </div>
   <footer class="post-foot">
-    {% if page.repo %}<p>Code and data for this article: <a href="{{ page.repo }}">{{ page.repo | remove: "https://" }}</a></p>{% endif %}
-    <p><a href="/writing/">← All writing</a></p>
+    {% if page.repo %}<p class="slip"><span class="slip-mark">code</span> The code, tests and data for this article are in <a href="{{ page.repo }}">{{ page.repo | remove: "https://" }}</a>.</p>{% endif %}
+    <p><a class="action" href="/writing/">Back to all writing</a></p>
   </footer>
 </article>

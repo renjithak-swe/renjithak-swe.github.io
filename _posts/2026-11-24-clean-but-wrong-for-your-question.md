@@ -5,7 +5,7 @@ tags: [data-quality, data-engineering]
 repo: https://github.com/renjithak-swe/clean-but-unfit
 ---
 
-Imagine you've just picked up a popular dataset. You run all the usual checks: no missing values, no duplicates, every number in a sensible range. Everything's green. ✅
+Imagine you've just picked up a popular dataset. You run all the usual checks: no missing values, no duplicates, every number in a sensible range. Everything's green.
 
 So you're good to go, right?
 
@@ -92,11 +92,11 @@ We can't see the true values hidden behind that cap. So for each question, I com
 
 | Question | As recorded | If capped homes were worth 2× | Verdict |
 |---|---|---|---|
-| 1. What's the median house value? | $179,700 | $179,700 | ✅ Not affected by the cap |
-| 2. What share of neighbourhoods are worth $400k+? | 8.58% | 8.58% | ✅ Not affected by the cap |
-| 3. What share are worth $600k+? | 0% | 4.68% | ❌ Somewhere between 0% and 4.68% |
-| 4. Average value in high-income areas (income $80k+)? | $460,371 | $779,474 | ❌ At least $460,371; no upper limit |
-| 5. How much does value rise per $10k of income? | $41,794 | $67,407 | ❌ Depends on what you assume |
+| 1. What's the median house value? | $179,700 | $179,700 | Safe: not affected by the cap |
+| 2. What share of neighbourhoods are worth $400k+? | 8.58% | 8.58% | Safe: not affected by the cap |
+| 3. What share are worth $600k+? | 0% | 4.68% | Range only: between 0% and 4.68% |
+| 4. Average value in high-income areas (income $80k+)? | $460,371 | $779,474 | Lower bound only: at least $460,371 |
+| 5. How much does value rise per $10k of income? | $41,794 | $67,407 | Unknown: depends on what you assume |
 
 I also tried 1.2× and 1.5×. Here's how far each answer moves:
 

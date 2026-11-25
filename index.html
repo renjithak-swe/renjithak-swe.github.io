@@ -1,211 +1,344 @@
 ---
 layout: default
 ---
-<section class="hero wrap">
-  <div class="hero-text">
-    <p class="eyebrow">Data platforms · Technical program leadership</p>
-    <h1>I build data platforms, and I lead the programs that ship&nbsp;them.</h1>
-    <p class="lede">
-      I’m Renjitha. For six and a half years I’ve worked on financial data systems, most recently as technical lead and
-      project manager at Morgan Stanley. I like both halves of that work: designing the pipeline, and getting six teams to agree on what ships first.
-    </p>
-    <p class="hero-actions">
-      <a class="btn btn-primary" href="#work">Case studies</a>
-      <a class="btn" href="/writing/">Writing</a>
-      <a class="btn" href="{{ site.links.linkedin }}">LinkedIn</a>
+<section class="sheet sheet-hero" aria-labelledby="hero-title">
+  <div class="hero-copy">
+    <h1 id="hero-title">I build data platforms, and I test when they can be&nbsp;trusted.</h1>
+    <p class="lede">I investigate when data can be trusted to answer the question we ask of it, drawing on nearly seven years of building financial data platforms, most recently as Director and technical lead at Morgan Stanley.</p>
+    <p class="actions">
+      <a class="action action-primary" href="/writing/clean-but-wrong-for-your-question/">Read the experiment</a>
+      <a class="action" href="#work">See the case studies</a>
     </p>
   </div>
 
-  <aside class="glance" aria-label="At a glance">
-    <dl>
-      <div><dt>Builds with</dt><dd>Spark, Databricks, Snowflake, Airflow, Kafka, Java</dd></div>
-      <div><dt>Delivers</dt><dd>Roadmaps, cross-team plans, go-live and rollback</dd></div>
-      <div><dt>Domain</dt><dd>Financial data and regulatory systems</dd></div>
-      <div><dt>Open to</dt><dd>Senior data engineering and technical program management roles · Bengaluru, hybrid or remote</dd></div>
+  <figure class="specimen specimen-hero">
+    <span class="tape tape-a" aria-hidden="true"></span>
+    <span class="tape tape-b" aria-hidden="true"></span>
+    <span class="stamp" aria-hidden="true"><span>Open</span><span>experiment</span><span class="data">2026</span></span>
+    <img src="/assets/img/clean-but-wrong/house-value-histogram-narrow.svg" width="360" height="380" alt="Histogram of California house values: most neighbourhoods fall between $50k and $350k, with a separate spike of 965 neighbourhoods recorded at exactly $500,001.">
+  </figure>
+
+  <div class="label-block">
+    <p class="label-name"><i>Clean but unfit</i></p>
+    <dl class="fields">
+      <div><dt>Collector</dt><dd>Renjitha K</dd></div>
+      <div><dt>Locality</dt><dd>California Housing, 1990 US census</dd></div>
+      <div><dt>Collected</dt><dd class="data">24 Nov 2026</dd></div>
+      <div><dt>Evidence</dt><dd><a href="https://github.com/renjithak-swe/clean-but-unfit">Repository with 52 tests</a>, public data with a pinned checksum</dd></div>
     </dl>
-  </aside>
+  </div>
+
+  <ol class="slips slips-layered" aria-label="Findings, oldest first">
+    <li class="slip"><span class="slip-mark">det.</span> <span class="data">24 Nov 2026</span> Clean: passes 14 of 15 quality checks.</li>
+    <li class="slip slip-rev"><span class="slip-mark">rev.</span> <span class="data">24 Nov 2026</span> Unfit for 3 of 5 questions: house values are capped at $500,001.</li>
+  </ol>
 </section>
 
-<section class="section wrap" id="work" data-lens="both">
-  <header class="section-head section-head-row">
-    <div>
-      <p class="eyebrow">Case studies</p>
-      <h2>Three programs, two sides of each</h2>
+<section class="tray wrap" aria-roledescription="carousel" aria-label="Highlights">
+  <div class="tray-head">
+    <h2 class="tray-title">Highlights</h2>
+    <div class="tray-controls">
+      <button type="button" class="tray-button" id="tray-prev" aria-label="Previous highlight"><svg viewBox="0 0 20 20" width="18" height="18" aria-hidden="true"><path d="M12.5 4 6.5 10l6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+      <button type="button" class="tray-button" id="tray-next" aria-label="Next highlight"><svg viewBox="0 0 20 20" width="18" height="18" aria-hidden="true"><path d="M7.5 4l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
     </div>
-    <div class="lens" role="group" aria-label="Choose which side of each case study to show">
-      <span class="lens-label">Show</span>
-      <button type="button" id="lens-both" data-set-lens="both" aria-pressed="true">Both sides</button>
-      <button type="button" id="lens-build" data-set-lens="build" aria-pressed="false">Engineering</button>
-      <button type="button" id="lens-deliver" data-set-lens="deliver" aria-pressed="false">Delivery</button>
-    </div>
-  </header>
+  </div>
+  <ul class="tray-track" id="tray-track">
+    <li class="tag-label" aria-roledescription="slide"><a href="https://github.com/renjithak-swe/clean-but-unfit"><b><i>Clean but unfit</i></b><span>The code, tests and data behind the experiment.</span><span class="tag-link">Open the repository</span></a></li>
+    <li class="tag-label" aria-roledescription="slide"><a href="#case-platform"><b>One source of truth for client data</b><span>A configuration-driven platform for a whole department.</span><span class="tag-link">Open the sheet</span></a></li>
+    <li class="tag-label" aria-roledescription="slide"><a href="#case-grouping"><b>Grouping clients for a regulator</b><span>Credit exposure tracked per group of connected clients.</span><span class="tag-link">Open the sheet</span></a></li>
+    <li class="tag-label" aria-roledescription="slide"><a href="#recognition"><b>Recognition</b><span>Two Global Technology Excellence Awards in 2025.</span><span class="tag-link">See the awards</span></a></li>
+  </ul>
+  <div class="tray-dots" id="tray-dots" role="group" aria-label="Choose a highlight"></div>
+</section>
 
-  <article class="case">
-    <header class="case-head">
-      <p class="case-index">Morgan Stanley · 2024–2026</p>
-      <h3>One source of truth for client data</h3>
-      <p class="case-problem">Six teams each had their own way to bring in client data from internal systems and vendors such as Bloomberg, GLEIF and Markit. Every new source meant new code, and the same client could show up as different records in different places.</p>
-      <p class="case-role"><span>Role</span>Technical lead and project manager · 9 engineers · 10–30 stakeholders</p>
-    </header>
-    <div class="case-sides">
-      <section class="side" data-side="build">
-        <h4>What I built</h4>
-        <p>A configuration-driven framework: each feed is declared in YAML, validated by a Spring Boot service, and generated into Airflow workflows that infer their own task dependencies. Data lands in a medallion pipeline on Azure, Databricks and Snowflake. Quantexa entity resolution gives every client one firm-wide ID.</p>
-      </section>
-      <section class="side" data-side="deliver">
-        <h4>How I delivered it</h4>
-        <p>I turned six teams’ workflows into one onboarding model, set up two-week sprints and an intake process, and reported to Executive and Managing Directors every two weeks. When a client couldn’t wait, we served them through existing components until their source was scheduled.</p>
-      </section>
+<section class="sheet sheet-about" id="about" aria-labelledby="about-title">
+  <h2 id="about-title">What I’m exploring, and where it comes from</h2>
+  <p class="sheet-intro">I’m interested in what happens when data systems feed automated decisions. A pipeline can run, a dataset can pass validation, and the answer can still be unfit for the decision. I explore how to make these systems more transparent and trustworthy, in small open experiments anyone can check.</p>
+  <table class="register">
+    <caption>Collection record</caption>
+    <thead><tr><th scope="col">From</th><th scope="col">Post</th><th scope="col">Where</th></tr></thead>
+    <tbody>
+      <tr><td class="data">2019</td><td>Systems Engineer</td><td>Tata Consultancy Services, for Bank of America</td></tr>
+      <tr><td class="data">2021</td><td>Senior Associate, tech lead</td><td>Morgan Stanley</td></tr>
+      <tr><td class="data">2023</td><td>Manager, tech lead</td><td>Morgan Stanley</td></tr>
+      <tr><td class="data">2024</td><td>Director, tech lead and project manager</td><td>Morgan Stanley</td></tr>
+      <tr class="register-now"><td class="data">2026</td><td>Independent experiments and writing</td><td>In the open</td></tr>
+    </tbody>
+  </table>
+  <p class="sheet-note">Away from work, I sing, paint, and love travelling and meeting people. I speak English, Hindi, Tamil and Malayalam, and I’m learning French.</p>
+</section>
+
+<section class="sheet sheet-experiments" id="experiments" aria-labelledby="experiments-title">
+  <h2 id="experiments-title">Experiments</h2>
+  <p class="sheet-intro">Small, reproducible investigations, each published with its article, code, tests and data source.</p>
+  <article class="entry">
+    <p class="label-name"><i>Clean but unfit</i></p>
+    <p class="entry-question">Can a dataset pass quality checks and still be unable to answer a reasonable question?</p>
+    <p>On the widely used California Housing dataset, two of five questions had a reliable answer. The other three depended on values hidden above a cap, and two of them swung by 60–70% across what-if scenarios.</p>
+    <p class="actions">
+      <a class="action action-primary" href="/writing/clean-but-wrong-for-your-question/">Read the article</a>
+      <a class="action" href="https://github.com/renjithak-swe/clean-but-unfit">Open the repository</a>
+    </p>
+  </article>
+</section>
+
+<div id="work" class="work">
+  <h2 class="work-title wrap">Case studies from Morgan Stanley</h2>
+  <p class="work-intro wrap">Built with Spark, Databricks, Snowflake, Airflow, Kafka, Java and Python.</p>
+
+  <section class="sheet sheet-case" id="case-platform" aria-labelledby="case-platform-title">
+    <div class="case-main">
+      <h3 id="case-platform-title">One source of truth for client data</h3>
+      <p class="case-problem">Six teams, eight sources, and one client showing up as many records.</p>
+      <figure class="specimen specimen-diagram">
+        <span class="tape tape-a" aria-hidden="true"></span>
+        <svg class="d-wide" viewBox="0 0 460 150" role="img" aria-label="Each feed is declared as configuration, workflows are generated from it, data moves from raw to cleaned layers, and entity matching gives one ID per client.">
+          <defs><marker id="arrow-flow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="currentColor"/></marker></defs>
+          <g class="d-edge"><line x1="100" y1="46" x2="118" y2="46" marker-end="url(#arrow-flow)"/><line x1="220" y1="46" x2="238" y2="46" marker-end="url(#arrow-flow)"/><line x1="340" y1="46" x2="358" y2="46" marker-end="url(#arrow-flow)"/></g>
+          <rect class="d-node" x="0" y="18" width="100" height="56"/><text class="d-label" x="50" y="42" text-anchor="middle">Feed</text><text class="d-label" x="50" y="60" text-anchor="middle">config</text>
+          <rect class="d-node" x="120" y="18" width="100" height="56"/><text class="d-label" x="170" y="42" text-anchor="middle">Generated</text><text class="d-label" x="170" y="60" text-anchor="middle">workflows</text>
+          <rect class="d-node" x="240" y="18" width="100" height="56"/><text class="d-label" x="290" y="42" text-anchor="middle">Raw to</text><text class="d-label" x="290" y="60" text-anchor="middle">cleaned</text>
+          <rect class="d-node d-node-key" x="360" y="18" width="100" height="56"/><text class="d-label" x="410" y="42" text-anchor="middle">One ID</text><text class="d-label" x="410" y="60" text-anchor="middle">per client</text>
+          <text class="d-note" x="50" y="100" text-anchor="middle">YAML, one</text><text class="d-note" x="50" y="118" text-anchor="middle">per source</text>
+          <text class="d-note" x="170" y="100" text-anchor="middle">Spring Boot,</text><text class="d-note" x="170" y="118" text-anchor="middle">Python, Airflow</text>
+          <text class="d-note" x="290" y="100" text-anchor="middle">Databricks,</text><text class="d-note" x="290" y="118" text-anchor="middle">Snowflake</text>
+          <text class="d-note" x="410" y="100" text-anchor="middle">entity</text><text class="d-note" x="410" y="118" text-anchor="middle">matching</text>
+        </svg>
+        <svg class="d-narrow" viewBox="0 0 300 330" role="img" aria-label="Each feed is declared as configuration, workflows are generated from it, data moves from raw to cleaned layers, and entity matching gives one ID per client.">
+          <defs><marker id="arrow-flow-n" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="currentColor"/></marker></defs>
+          <g class="d-edge"><line x1="150" y1="64" x2="150" y2="84" marker-end="url(#arrow-flow-n)"/><line x1="150" y1="148" x2="150" y2="168" marker-end="url(#arrow-flow-n)"/><line x1="150" y1="232" x2="150" y2="252" marker-end="url(#arrow-flow-n)"/></g>
+          <rect class="d-node" x="20" y="4" width="260" height="60"/><text class="d-label" x="150" y="30" text-anchor="middle">Feed config</text><text class="d-note" x="150" y="50" text-anchor="middle">YAML, one per source</text>
+          <rect class="d-node" x="20" y="88" width="260" height="60"/><text class="d-label" x="150" y="114" text-anchor="middle">Generated workflows</text><text class="d-note" x="150" y="134" text-anchor="middle">Spring Boot, Python, Airflow</text>
+          <rect class="d-node" x="20" y="172" width="260" height="60"/><text class="d-label" x="150" y="198" text-anchor="middle">Raw to cleaned</text><text class="d-note" x="150" y="218" text-anchor="middle">Databricks, Snowflake</text>
+          <rect class="d-node d-node-key" x="20" y="256" width="260" height="60"/><text class="d-label" x="150" y="282" text-anchor="middle">One ID per client</text><text class="d-note" x="150" y="302" text-anchor="middle">entity matching</text>
+        </svg>
+      </figure>
     </div>
-    <figure class="flow" data-side="build" aria-label="How configuration becomes running pipelines">
-      <ol class="steps">
-        <li><b>YAML</b><span>feed declared as config</span></li>
-        <li><b>Spring Boot</b><span>validate → JSON</span></li>
-        <li><b>Python generator</b><span>infer deps, add metrics</span></li>
-        <li><b>Airflow</b><span>raw → bronze → silver → Snowflake</span></li>
+    <div class="case-side">
+      <div class="label-block">
+        <p class="label-name">Client data platform</p>
+        <dl class="fields">
+          <div><dt>Period</dt><dd class="data">2024–2026</dd></div>
+          <div><dt>Role</dt><dd>Tech lead and project manager</dd></div>
+          <div><dt>Team</dt><dd>9 engineers, 6 partner teams</dd></div>
+        </dl>
+      </div>
+      <ol class="slips" aria-label="Results">
+        <li class="slip"><span class="slip-mark">result</span> 8 sources onboarded in 5 months.</li>
+        <li class="slip"><span class="slip-mark">result</span> 50% processing efficiency gain, from profiling and optimising the pipeline code.</li>
+        <li class="slip"><span class="slip-mark">result</span> No open production tickets for a year.</li>
       </ol>
-    </figure>
-    <ul class="outcomes">
-      <li><strong>8</strong><span>sources onboarded in 5 months</span></li>
-      <li><strong>50%</strong><span>processing efficiency gain</span></li>
-      <li><strong>0</strong><span>open production tickets for a year</span></li>
-    </ul>
-  </article>
-
-  <article class="case">
-    <header class="case-head">
-      <p class="case-index">Morgan Stanley · 2021–2023</p>
-      <h3>Grouping clients for a regulator</h3>
-      <p class="case-problem">The Hong Kong Monetary Authority required the bank’s Asia entities to track credit exposure per group of connected clients: those under common control or ownership. That logic had to sit inside account opening, which five other teams also owned.</p>
-      <p class="case-role"><span>Role</span>Technical lead · 12 engineers · 5 partner teams</p>
-    </header>
-    <div class="case-sides">
-      <section class="side" data-side="build">
-        <h4>What I built</h4>
-        <p>A grouping calculation engine and approval workflow embedded in the wealth-management account-opening flow, with results written to the account master. In the same role, I automated client-committee and fast-track approvals as event-driven Spring Boot and Kafka services.</p>
-      </section>
-      <section class="side" data-side="deliver">
-        <h4>How I delivered it</h4>
-        <p>I managed dependencies across the frontend, QA, production engineering, Pega workflow and client teams, and planned the cutover, rollback and release coordination for go-live. I also ramped up new graduate engineers on the team.</p>
-      </section>
+      <details class="notes">
+        <summary>Field notes: how I designed and delivered it</summary>
+        <p><b>Engineering.</b> I designed the configuration-driven framework, so new sources are added by writing configuration, not code. Then I led the team that built the pipeline on Azure, Databricks and Snowflake.</p>
+        <p><b>Delivery.</b> I merged six teams’ workflows into one onboarding model, ran two-week sprints, and reported to Executive and Managing Directors every two weeks.</p>
+      </details>
     </div>
-    <ul class="outcomes">
-      <li><strong>Live</strong><span>regulatory requirement met in production</span></li>
-      <li><strong>50%+</strong><span>less manual effort in approvals</span></li>
-      <li><strong>2022</strong><span>Operations Technology Award, Taking Ownership</span></li>
-    </ul>
-  </article>
+  </section>
 
-  <article class="case">
-    <header class="case-head">
-      <p class="case-index">Morgan Stanley · 2023–2024</p>
-      <h3>From five months to three weeks</h3>
-      <p class="case-problem">Adding one field to non-client account onboarding took 4–5 months. The platform was undocumented legacy JavaScript, and the reasons for the delay weren’t obvious.</p>
-      <p class="case-role"><span>Role</span>Technical lead · multiple business units</p>
-    </header>
-    <div class="case-sides">
-      <section class="side" data-side="build">
-        <h4>What I built</h4>
-        <p>A target microservice architecture and a migration path for the undocumented platform. In the same role, I built Pipex Initializer, a tool that standardises how new microservices are created in the monorepo.</p>
-      </section>
-      <section class="side" data-side="deliver">
-        <h4>How I delivered it</h4>
-        <p>I traced the delay to dependent components missing from test environments and code that was hard to debug. Then I agreed a plan with stakeholders: new requests move first, and the full platform follows.</p>
-      </section>
+  <section class="sheet sheet-case" id="case-grouping" aria-labelledby="case-grouping-title">
+    <div class="case-main">
+      <h3 id="case-grouping-title">Grouping clients for a regulator</h3>
+      <p class="case-problem">Hong Kong’s regulator (the HKMA) required credit exposure to be tracked per group of connected clients.</p>
+      <figure class="specimen specimen-diagram">
+        <span class="tape tape-a" aria-hidden="true"></span>
+        <svg class="d-wide" viewBox="0 0 460 210" role="img" aria-label="Clients that share an owner are grouped, and exposure is summed and checked against a limit per group.">
+          <defs>
+            <marker id="arrow-group" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="currentColor"/></marker>
+          </defs>
+          <g class="d-edge">
+            <line x1="58" y1="40" x2="150" y2="70"/><line x1="58" y1="80" x2="150" y2="76"/><line x1="58" y1="120" x2="150" y2="82"/>
+            <line x1="58" y1="160" x2="150" y2="150"/><line x1="58" y1="195" x2="150" y2="156"/>
+            <line x1="250" y1="76" x2="316" y2="102" marker-end="url(#arrow-group)"/><line x1="250" y1="153" x2="316" y2="120" marker-end="url(#arrow-group)"/>
+          </g>
+          <g class="d-clients"><circle cx="46" cy="40" r="12"/><circle cx="46" cy="80" r="12"/><circle cx="46" cy="120" r="12"/><circle cx="46" cy="160" r="12"/><circle cx="46" cy="195" r="12"/></g>
+          <text class="d-note" x="8" y="20">clients</text>
+          <rect class="d-node" x="150" y="56" width="100" height="40"/><text class="d-label" x="200" y="81" text-anchor="middle">Group A</text>
+          <rect class="d-node" x="150" y="133" width="100" height="40"/><text class="d-label" x="200" y="158" text-anchor="middle">Group B</text>
+          <rect class="d-node d-node-key" x="318" y="88" width="134" height="48"/>
+          <text class="d-label" x="385" y="108" text-anchor="middle">Exposure vs</text><text class="d-label" x="385" y="126" text-anchor="middle">limit per group</text>
+          <text class="d-note" x="284" y="80" text-anchor="middle">sum</text>
+        </svg>
+        <svg class="d-narrow" viewBox="0 0 300 300" role="img" aria-label="Clients that share an owner are grouped, and exposure is summed and checked against a limit per group.">
+          <defs><marker id="arrow-group-n" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="currentColor"/></marker></defs>
+          <text class="d-note" x="150" y="16" text-anchor="middle">clients</text>
+          <g class="d-edge"><line x1="40" y1="52" x2="80" y2="110"/><line x1="90" y1="52" x2="85" y2="110"/><line x1="140" y1="52" x2="90" y2="110"/><line x1="200" y1="52" x2="215" y2="110"/><line x1="255" y1="52" x2="220" y2="110"/>
+            <line x1="85" y1="150" x2="140" y2="210" marker-end="url(#arrow-group-n)"/><line x1="215" y1="150" x2="160" y2="210" marker-end="url(#arrow-group-n)"/></g>
+          <g class="d-clients"><circle cx="40" cy="40" r="12"/><circle cx="90" cy="40" r="12"/><circle cx="140" cy="40" r="12"/><circle cx="200" cy="40" r="12"/><circle cx="255" cy="40" r="12"/></g>
+          <rect class="d-node" x="35" y="110" width="100" height="40"/><text class="d-label" x="85" y="135" text-anchor="middle">Group A</text>
+          <rect class="d-node" x="165" y="110" width="100" height="40"/><text class="d-label" x="215" y="135" text-anchor="middle">Group B</text>
+          <text class="d-note" x="150" y="190" text-anchor="middle">sum</text>
+          <rect class="d-node d-node-key" x="60" y="214" width="180" height="56"/><text class="d-label" x="150" y="238" text-anchor="middle">Exposure vs</text><text class="d-label" x="150" y="257" text-anchor="middle">limit per group</text>
+        </svg>
+        <figcaption>Clients with the same owner form a group. Exposure is summed per group and checked against its limit.</figcaption>
+      </figure>
     </div>
-    <ul class="outcomes">
-      <li><strong>2–3 wk</strong><span>per attribute, down from 4–5 months</span></li>
-      <li><strong>5 min</strong><span>service setup, down from 1–2 days</span></li>
-      <li><strong>40+</strong><span>services built with Pipex</span></li>
-    </ul>
-  </article>
-</section>
+    <div class="case-side">
+      <div class="label-block">
+        <p class="label-name">Single Counterparty Grouping</p>
+        <dl class="fields">
+          <div><dt>Period</dt><dd class="data">2021–2023</dd></div>
+          <div><dt>Role</dt><dd>Tech lead</dd></div>
+          <div><dt>Team</dt><dd>12 engineers, 5 partner teams</dd></div>
+        </dl>
+      </div>
+      <ol class="slips" aria-label="Results">
+        <li class="slip"><span class="slip-mark">result</span> Live inside account opening.</li>
+        <li class="slip"><span class="slip-mark">result</span> 50%+ less manual effort after the approvals were automated.</li>
+        <li class="slip"><span class="slip-mark">result</span> Operations Technology Award, 2022.</li>
+      </ol>
+      <details class="notes">
+        <summary>Field notes: how I designed and delivered it</summary>
+        <p><b>Engineering.</b> My team built the grouping engine and approval workflow inside account opening, and I led its design. I also led the automation of approvals as event-driven Spring Boot and Kafka services.</p>
+        <p><b>Delivery.</b> I coordinated the frontend, QA, production engineering, workflow-platform and client teams, and owned the cutover, rollback and go-live.</p>
+      </details>
+    </div>
+  </section>
 
-<section class="section wrap" id="writing">
-  <header class="section-head">
-    <p class="eyebrow">Writing</p>
-    <h2>Making tech concepts easier</h2>
-    <p class="section-intro">I write about the technology I work with, from Redis and Airflow to data modelling and data quality, and try to explain each idea as simply as I can.</p>
-  </header>
+  <section class="sheet sheet-case" id="case-modernisation" aria-labelledby="case-modernisation-title">
+    <div class="case-main">
+      <h3 id="case-modernisation-title">From five months to three weeks</h3>
+      <p class="case-problem">Adding one onboarding field took months on an undocumented legacy platform.</p>
+      <figure class="specimen specimen-diagram">
+        <span class="tape tape-a" aria-hidden="true"></span>
+        <svg class="d-wide" viewBox="0 0 460 128" role="img" aria-label="Time to deliver one onboarding field fell from about 19.5 weeks to about 2.5 weeks, drawn to scale.">
+          <text class="d-note" x="0" y="31">Before</text>
+          <rect class="d-bar d-bar-before" x="66" y="14" width="300" height="24"/>
+          <text class="d-label" x="374" y="31">4–5 months</text>
+          <text class="d-note" x="0" y="79">After</text>
+          <rect class="d-bar d-bar-after" x="66" y="62" width="38" height="24"/>
+          <text class="d-label" x="112" y="79">2–3 weeks</text>
+          <text class="d-note" x="66" y="118">drawn to scale at midpoints: 19.5 vs 2.5 weeks</text>
+        </svg>
+        <svg class="d-narrow" viewBox="0 0 300 170" role="img" aria-label="Time to deliver one onboarding field fell from about 19.5 weeks to about 2.5 weeks, drawn to scale.">
+          <text class="d-note" x="0" y="18">Before: 4–5 months</text>
+          <rect class="d-bar d-bar-before" x="0" y="26" width="290" height="22"/>
+          <text class="d-note" x="0" y="84">After: 2–3 weeks</text>
+          <rect class="d-bar d-bar-after" x="0" y="92" width="37" height="22"/>
+          <text class="d-note" x="0" y="146">drawn to scale at midpoints:</text>
+          <text class="d-note" x="0" y="164">19.5 vs 2.5 weeks</text>
+        </svg>
+      </figure>
+    </div>
+    <div class="case-side">
+      <div class="label-block">
+        <p class="label-name">Account onboarding</p>
+        <dl class="fields">
+          <div><dt>Period</dt><dd class="data">2023–2024</dd></div>
+          <div><dt>Role</dt><dd>Tech lead</dd></div>
+          <div><dt>Scope</dt><dd>Several business units</dd></div>
+        </dl>
+      </div>
+      <ol class="slips" aria-label="Results">
+        <li class="slip"><span class="slip-mark">result</span> About 8× faster delivery per field.</li>
+        <li class="slip"><span class="slip-mark">result</span> New services set up in 5 minutes instead of 1–2 days.</li>
+        <li class="slip"><span class="slip-mark">result</span> 40+ services built with the setup tool I wrote.</li>
+      </ol>
+      <details class="notes">
+        <summary>Field notes: how I designed and delivered it</summary>
+        <p><b>Engineering.</b> I designed the target microservice architecture and migration plan. Separately, I built Pipex Initializer, a tool that creates new microservices from one standard template.</p>
+        <p><b>Delivery.</b> I traced the delay to missing test dependencies and hard-to-debug code, then agreed a plan: new requests first, the full platform after.</p>
+      </details>
+    </div>
+  </section>
+</div>
 
-  <div class="writing-grid">
+<section class="sheet sheet-catalogue" id="writing" aria-labelledby="writing-title">
+  <h2 id="writing-title">Making tech concepts easier</h2>
+  <div class="catalogue">
     <div>
-      <h3 class="list-title">Latest</h3>
+      <h3 class="catalogue-title">Latest</h3>
       {% if site.posts.size > 0 %}
-      <ul class="post-list">
+      <ul class="catalogue-list">
         {% for post in site.posts limit: 4 %}
-        <li>
-          <a href="{{ post.url }}">{{ post.title }}</a>
-          <span class="post-list-meta"><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%-d %b %Y" }}</time>{% if post.description %} · {{ post.description }}{% endif %}</span>
-        </li>
+        <li><a href="{{ post.url }}">{{ post.title }}</a><span class="data">{{ post.date | date: "%-d %b %Y" }}</span></li>
         {% endfor %}
       </ul>
-      <p><a class="more" href="/writing/">All writing →</a></p>
+      <p><a class="more" href="/writing/">All writing</a></p>
       {% else %}
       <p class="empty">A new article is on its way. Subscribe via <a href="/feed.xml">RSS</a>.</p>
       {% endif %}
     </div>
     <div>
-      <h3 class="list-title">Earlier, on Hashnode</h3>
-      <ul class="post-list">
+      <h3 class="catalogue-title">Earlier, on Hashnode</h3>
+      <ul class="catalogue-list">
         {% for item in site.data.hashnode limit: 3 %}
-        <li>
-          <a href="{{ item.url }}">{{ item.title }}</a>
-          <span class="post-list-meta"><time datetime="{{ item.date }}">{{ item.date | date: "%b %Y" }}</time> · {{ item.topic }}</span>
-        </li>
+        <li><a href="{{ item.url }}">{{ item.title }}</a><span class="data">{{ item.date | date: "%b %Y" }}</span></li>
         {% endfor %}
       </ul>
-      <p><a class="more" href="{{ site.links.hashnode }}">All on Hashnode →</a></p>
     </div>
   </div>
 </section>
 
-<section class="section wrap about" id="about">
-  <header class="section-head">
-    <p class="eyebrow">About</p>
-    <h2>Engineer first, then the person who unblocks the team</h2>
-  </header>
-  <div class="about-body">
-    <p>I started as a systems engineer at Tata Consultancy Services on Bank of America’s payment systems. At Morgan Stanley I moved from technical lead to Director, and my work grew from building systems to also deciding what got built, in what order, and by whom.</p>
-    <p>Away from work, I sing, paint, and love travelling and meeting people. I speak English, Hindi, Tamil and Malayalam, and I’m learning French.</p>
-  </div>
-
-  <div class="awards">
-    <h3 class="list-title">Awards</h3>
-    <ul class="award-list">
-      <li><span class="award-year">2025</span><div><b>Global Technology Excellence Award: Strengthen Resilience</b><span>Morgan Stanley · for a reusable data ingestion framework that removed hundreds of hours of manual entity-resolution work</span></div></li>
-      <li><span class="award-year">2025</span><div><b>Global Technology Excellence Award: Talent Development</b><span>Morgan Stanley · for running the Data Engineering Club in Asia</span></div></li>
-      <li><span class="award-year">2025</span><div><b>GenAI Hackathon: shortlisted for the final round</b><span>Morgan Stanley · a proof of concept that extracts KYC requirements from regulatory rules and finds the matching details in scanned onboarding documents, cutting manual analyst review. It went on to become a funded production project.</span></div></li>
-      <li><span class="award-year">2022</span><div><b>Operations Technology Award: Taking Ownership (Putting Clients First)</b><span>Morgan Stanley · for the Single Counterparty Grouping program</span></div></li>
-      <li><span class="award-year">2022</span><div><b>Key Contributor, Squad Shoutouts</b><span>Morgan Stanley</span></div></li>
-      <li><span class="award-year">2021</span><div><b>Java Olympics Champion</b><span>Morgan Stanley</span></div></li>
-      <li><span class="award-year">2020</span><div><b>Special Achievement Award · On the Spot Award · Beyond Excellence Award</b><span>Tata Consultancy Services</span></div></li>    </ul>
-  </div>
+<section class="sheet sheet-accessions" id="recognition" aria-labelledby="recognition-title">
+  <h2 id="recognition-title">Awards</h2>
+  <table class="register">
+    <caption class="visually-hidden">Awards by year</caption>
+    <thead><tr><th scope="col">Year</th><th scope="col">Award</th><th scope="col">For</th></tr></thead>
+    <tbody>
+      <tr><td class="data">2025</td><td>Global Technology Excellence Award: Strengthen Resilience</td><td>A reusable data ingestion framework, Morgan Stanley</td></tr>
+      <tr><td class="data">2025</td><td>Global Technology Excellence Award: Talent Development</td><td>Running the Data Engineering Club in Asia, Morgan Stanley</td></tr>
+      <tr><td class="data">2025</td><td>GenAI Hackathon, shortlisted for the final round</td><td>A proof of concept that reads customer-onboarding documents; later a funded production project</td></tr>
+      <tr><td class="data">2022</td><td>Operations Technology Award: Taking Ownership</td><td>Single Counterparty Grouping, Morgan Stanley</td></tr>
+      <tr><td class="data">2022</td><td>Key Contributor, Squad Shoutouts</td><td>Morgan Stanley</td></tr>
+      <tr><td class="data">2021</td><td>Java Olympics Champion</td><td>Morgan Stanley</td></tr>
+      <tr><td class="data">2020</td><td>Special Achievement, On the Spot and Beyond Excellence awards</td><td>Tata Consultancy Services</td></tr>
+    </tbody>
+  </table>
 </section>
 
-<section class="contact wrap" id="contact">
-  <h2>Building a data platform, or trying to ship one?</h2>
-  <ul class="contact-links">
-    <li><span>Email</span><a href="mailto:{{ site.links.email }}">{{ site.links.email }}</a></li>
-    <li><span>LinkedIn</span><a href="{{ site.links.linkedin }}">in/renjitha-k</a></li>
-    <li><span>GitHub</span><a href="{{ site.links.github }}">renjithak-swe</a></li>
-  </ul>
+<section class="sheet sheet-contact" id="contact" aria-labelledby="contact-title">
+  <h2 id="contact-title">Working on trustworthy data, or shipping a data platform?</h2>
+  <p class="sheet-intro">I’m open to collaborating on open work about trustworthy data and AI, and to senior data engineering and technical program management roles.</p>
+  <dl class="fields fields-contact">
+    <div><dt>Email</dt><dd><a href="mailto:{{ site.links.email }}">{{ site.links.email }}</a></dd></div>
+    <div><dt>LinkedIn</dt><dd><a href="{{ site.links.linkedin }}">in/renjitha-k</a></dd></div>
+    <div><dt>GitHub</dt><dd><a href="{{ site.links.github }}">renjithak-swe</a></dd></div>
+    <div><dt>Résumé</dt><dd>On request by email</dd></div>
+  </dl>
 </section>
 
 <script>
   (function () {
-    var work = document.getElementById("work");
-    var buttons = work.querySelectorAll("[data-set-lens]");
-    function setLens(lens) {
-      work.dataset.lens = lens;
-      buttons.forEach(function (b) { b.setAttribute("aria-pressed", String(b.dataset.setLens === lens)); });
-    }
-    buttons.forEach(function (b) {
-      b.addEventListener("click", function () {
-        setLens(b.dataset.setLens);
-        try { localStorage.setItem("lens", b.dataset.setLens); } catch (e) {}
-      });
+    var track = document.getElementById("tray-track");
+    var prev = document.getElementById("tray-prev");
+    var next = document.getElementById("tray-next");
+    var dotsBox = document.getElementById("tray-dots");
+    if (!track) return;
+    var packets = Array.prototype.slice.call(track.children);
+    var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    var dots = packets.map(function (packet, index) {
+      var dot = document.createElement("button");
+      dot.type = "button";
+      dot.className = "tray-dot";
+      dot.setAttribute("aria-label", "Show highlight " + (index + 1) + " of " + packets.length);
+      dot.addEventListener("click", function () { scrollToPacket(index); });
+      dotsBox.appendChild(dot);
+      return dot;
     });
-    try { var saved = localStorage.getItem("lens"); if (saved === "build" || saved === "deliver") setLens(saved); } catch (e) {}
+    function scrollToPacket(index) {
+      var target = packets[Math.max(0, Math.min(index, packets.length - 1))];
+      track.scrollTo({ left: target.offsetLeft - track.offsetLeft, behavior: reduceMotion ? "auto" : "smooth" });
+    }
+    function currentIndex() {
+      var left = track.scrollLeft, best = 0;
+      packets.forEach(function (packet, index) {
+        if (Math.abs(packet.offsetLeft - track.offsetLeft - left) < Math.abs(packets[best].offsetLeft - track.offsetLeft - left)) best = index;
+      });
+      return best;
+    }
+    function update() {
+      var scrollable = track.scrollWidth > track.clientWidth + 2;
+      track.closest(".tray").classList.toggle("is-scrollable", scrollable);
+      var index = currentIndex();
+      dots.forEach(function (dot, i) { dot.setAttribute("aria-current", String(i === index)); });
+      prev.disabled = track.scrollLeft <= 2;
+      next.disabled = track.scrollLeft + track.clientWidth >= track.scrollWidth - 2;
+    }
+    prev.addEventListener("click", function () { scrollToPacket(currentIndex() - 1); });
+    next.addEventListener("click", function () { scrollToPacket(currentIndex() + 1); });
+    track.addEventListener("scroll", function () { window.requestAnimationFrame(update); }, { passive: true });
+    window.addEventListener("resize", update);
+    update();
   })();
 </script>

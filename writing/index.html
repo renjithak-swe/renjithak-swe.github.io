@@ -3,22 +3,20 @@ layout: default
 title: Writing
 description: Articles by Renjitha K on data engineering, systems and the technology behind them.
 ---
-<section class="section wrap page-top">
-  <header class="section-head">
-    <p class="eyebrow">Writing</p>
-    <h1>Making tech concepts easier</h1>
-    <p class="section-intro">Articles on the technology I work with, explained as simply as I can.</p>
-  </header>
+<section class="sheet sheet-catalogue page-sheet" aria-labelledby="writing-title">
+  <h1 id="writing-title">Making tech concepts easier</h1>
+  <p class="sheet-intro">Articles on the technology I work with, explained as simply as I can.</p>
 
   {% if site.posts.size > 0 %}
   {% assign by_year = site.posts | group_by_exp: "p", "p.date | date: '%Y'" %}
   {% for year in by_year %}
-  <h2 class="year">{{ year.name }}</h2>
-  <ul class="post-list post-list-wide">
+  <h2 class="catalogue-title">{{ year.name }}</h2>
+  <ul class="catalogue-list">
     {% for post in year.items %}
     <li>
       <a href="{{ post.url }}">{{ post.title }}</a>
-      <span class="post-list-meta"><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%-d %b" }}</time>{% if post.description %} · {{ post.description }}{% endif %}</span>
+      {% if post.description %}<span class="catalogue-desc">{{ post.description }}</span>{% endif %}
+      <span class="data">{{ post.date | date: "%-d %b %Y" }}</span>
     </li>
     {% endfor %}
   </ul>
@@ -27,12 +25,12 @@ description: Articles by Renjitha K on data engineering, systems and the technol
   <p class="empty">The first article is on its way. Subscribe via <a href="/feed.xml">RSS</a> to get it when it’s out.</p>
   {% endif %}
 
-  <h2 class="year">Earlier, on Hashnode</h2>
-  <ul class="post-list post-list-wide">
+  <h2 class="catalogue-title">Earlier, on Hashnode</h2>
+  <ul class="catalogue-list">
     {% for item in site.data.hashnode %}
     <li>
       <a href="{{ item.url }}">{{ item.title }}</a>
-      <span class="post-list-meta"><time datetime="{{ item.date }}">{{ item.date | date: "%b %Y" }}</time> · {{ item.topic }}</span>
+      <span class="data">{{ item.date | date: "%b %Y" }}, {{ item.topic }}</span>
     </li>
     {% endfor %}
   </ul>
